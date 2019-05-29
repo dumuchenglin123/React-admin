@@ -1,0 +1,1 @@
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
