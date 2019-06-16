@@ -6,11 +6,6 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
 ### `npm test`
 
@@ -31,11 +26,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
@@ -66,3 +56,41 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### 坑总结
+
+## 1.引用antd css时 无效果 
+
+*** 要实现css按需加载， 在webpack.config里面 babel-loader 添加 ***
+
+```
+  plugins: [
+                  [
+                    require.resolve('babel-plugin-named-asset-import'),
+                    {
+                      loaderMap: {
+                        svg: {
+                          ReactComponent: '@svgr/webpack?-svgo,+ref![path]',
+                        },
+                      },
+                    },
+
+
+                  ],
+                  //   在此处加上下面代码才能 antd css实现按需加载
+                  ['import', { libraryName: 'antd', style: 'css' }],
+                ],
+```
+这样，主文件只需引用 所需组件就行， 它自动加载相应的CSS
+
+## eslint检测 实现保存前自动格式化
+
+*** 除了在vscode 里的eslint.autoFixedOnsave 为 true时，同时要有相应的eslintrc文件，若没生效建议重启一遍服务器 ***
+
+## React router  因只涉及到浏览器 加载路由时 只需下载 React-router-dom 包
+[react-router](https://www.jianshu.com/p/548674270455)
+
+
+## 在配置路由时  请参照 
+[react-router](https://zhuanlan.zhihu.com/p/43581520)

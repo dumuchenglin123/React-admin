@@ -1,6 +1,6 @@
-import styles from './Breadcrumb.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+// import styles from './Breadcrumb.css';
 
 export default class App extends Component {
   constructor(props) {
@@ -14,19 +14,19 @@ export default class App extends Component {
     const { breadcrumbs } = this.props;
     return (
       <ul className={styles.breadcrumbs}>
-        {breadcrumbs.map((item, i) =>
+        {breadcrumbs.map((item, i) => (
           <li key={i}>
-            {i !== 0 &&
-              <i className="fa fa-angle-right"></i>
+            {i !== 0
+              && <i className="fa fa-angle-right" />
             }
-            {item.length === 1 &&
-              <span>{item[0]}</span>
+            {item.length === 1
+              && <span>{item[0]}</span>
             }
-            {item.length === 2 &&
-              <Link to={item[1]}>{item[0]}</Link>
+            {item.length === 2
+              && <Link to={item[1]}>{item[0]}</Link>
             }
           </li>
-        )}
+        ))}
       </ul>
     );
   }
