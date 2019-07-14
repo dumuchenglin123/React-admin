@@ -1,0 +1,7 @@
+{
+    // Enable/disable default JavaScript formatter (For Prettier)
+    // "javascript.format.enable": false,
+    // // in case they could not be inferred from eslint rules.
+    // "prettier.eslintIntegration": true,
+    // "editor.formatOnSave": true,
+}

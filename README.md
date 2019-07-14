@@ -94,3 +94,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## 在配置路由时  请参照 
 [react-router](https://zhuanlan.zhihu.com/p/43581520)
+
+
+## 实时编写组件文档，一边收集组件文档
+[storybook](https://storybook.js.org/docs/guides/guide-react/)

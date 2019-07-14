@@ -4,11 +4,15 @@
   padding: 0 24px;
   cursor: pointer;
   transition: color 0.3s;
+
+  &:hover {
+    color: #1890ff
+  }
 }
 
-.trigger:hover {
+/* .trigger:hover {
   color: #1890ff;
-}
+} */
 
 .logo {
   height: 32px;

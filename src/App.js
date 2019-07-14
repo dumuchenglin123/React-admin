@@ -1,20 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // import {Button, Input} from 'antd'
 import {
   Route, BrowserRouter as Router, Switch, Redirect,
-} from 'react-router-dom'
-import Layouts from './layouts/Layouts'
-import Login from './views/login'
+} from 'react-router-dom';
+import Layouts from './layouts/Layouts';
+import Login from './views/login';
 
 class App extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
 
-    }
+    };
   }
 
-  render () {
+  render() {
     return (
       <Router>
         <Switch>
@@ -23,8 +23,8 @@ class App extends Component {
           <Redirect to="/index" />
         </Switch>
       </Router>
-    )
+    );
   }
 }
 
-export default App
+export default App;

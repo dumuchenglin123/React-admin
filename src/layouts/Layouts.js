@@ -1,10 +1,10 @@
-/* eslint-disable react/destructuring-assignment */
-import React, { Component } from 'react'
-import { Layout, Breadcrumb, Icon } from 'antd'
-import style from './Layout.module.css'
+
+import React, { Component } from 'react';
+import { Layout, Breadcrumb, Icon } from 'antd';
+import style from './Layout.module.css';
 // import Header from './Header';
-import Nav from './Nav'
-import Content1 from './Content'
+import Nav from './Nav';
+import Content1 from './Content';
 // import Footer from './Footer';
 
 const {
@@ -12,39 +12,32 @@ const {
   Content,
   Footer,
   Sider,
-} = Layout
+} = Layout;
 
 class Layouts extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       collapsed: false,
-    }
+    };
   }
 
   toggle = () => {
     this.setState(({ collapsed }) => ({
       collapsed: !collapsed,
-    }))
+    }));
   }
 
-  render () {
+  render() {
     // const { history, match, location } = this.props
     return (
       <React.Fragment>
         <Layout style={{ minHeight: '100vh' }}>
-          <Sider
-            trigger={null}
-            collapsible
-            collapsed={this.state.collapsed}
-
-          >
+          <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
             <div className={style.logo} />
             <Nav />
           </Sider>
-
           <Layout>
-
             <Header style={{ background: '#fff', padding: 0 }}>
               <Icon
                 className={style.trigger}
@@ -63,15 +56,16 @@ class Layouts extends Component {
               </div> */}
               <Content1 />
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer style={{ textAlign: 'center' }}>
+              Ant Design ©2018 Created by Ant UED
+            </Footer>
           </Layout>
           {' '}
         </Layout>
         {' '}
-
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default Layouts
+export default Layouts;
