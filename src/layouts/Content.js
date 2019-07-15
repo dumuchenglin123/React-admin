@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Routers from '../router';
 
-class Content extends Component {
+class Content extends PureComponent {
   render() {
     return (
       <React.Fragment>

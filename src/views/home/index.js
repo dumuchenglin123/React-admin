@@ -10,7 +10,6 @@ class index extends Component {
       </div>
     );
   }
-}
 
 index.propTypes = {
 
