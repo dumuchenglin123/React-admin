@@ -1,17 +1,17 @@
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Route, Switch, withRouter, Redirect,
-} from 'react-router-dom';
-import Home from '../views/home';
-import DashBoard from '../views/DashBoard';
-import Forms from '../views/Forms';
-import Login from '../views/login';
+} from 'react-router-dom'
+import Home from '../views/home'
+import DashBoard from '../views/DashBoard'
+import Forms from '../views/Forms'
+// import Login from '../views/login'
 
 @withRouter
 class Routers extends Component {
-  render() {
-    const { history, match, location } = this.props;
+  render () {
+    const { match } = this.props
     return (
       <Switch>
         <Route exact path={`${match.path}`} component={Home} />
@@ -20,7 +20,7 @@ class Routers extends Component {
         <Redirect to={`${match.path}`} />
       </Switch>
 
-    );
+    )
   }
 }
-export default Routers;
+export default Routers

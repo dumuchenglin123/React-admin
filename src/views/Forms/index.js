@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+// import PropTypes from 'prop-types';
 
 class index extends Component {
-  render() {
+  render () {
     return (
       <div>
         B
       </div>
-    );
+    )
   }
 }
 
-index.propTypes = {
+// index.propTypes = {
 
-};
+// };
 
-export default index;
+export default index
