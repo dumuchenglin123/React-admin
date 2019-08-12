@@ -1,0 +1,40 @@
+├── .storybook                               storybook 配置文件
+├── .vscode
+├── config
+│   ├── env.js
+│   ├── jest
+│   ├── modules.js
+│   ├── paths.js
+│   ├── pnpTs.js
+│   ├── webpack.config.js
+│   └── webpackDevServer.config.js
+├── config-overrides.js
+├── mark.txt
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo.svg
+│   └── manifest.json
+├── README.md
+├── scripts
+│   ├── build.js
+│   ├── start.js
+│   └── test.js
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── components                      组件库
+│   ├── index.css
+│   ├── index.js
+│   ├── layouts                         布局组件
+│   ├── logo.svg                        LOGO图表
+│   ├── router                          路由列表
+│   ├── serviceWorker.js                react-app自带
+│   ├── utils                           工具库
+│   └── views                           页面文件夹
+├── stories                             bookstory 文档编辑处
+│   └── index.js
+└── tree.md

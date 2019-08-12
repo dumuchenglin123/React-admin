@@ -7,7 +7,7 @@ const { SubMenu } = Menu;
 
 @withRouter
 class Sider extends Component {
-  genMenus(data) {
+  genMenus (data) {
     const { match } = this.props;
     if (!data || !data.length) {
       return false;
@@ -43,7 +43,7 @@ class Sider extends Component {
     });
   }
 
-  render() {
+  render () {
     return (
       <div>
         <Menu

@@ -14,7 +14,7 @@ export default [
         key: '1-2',
         // icon: 'mail',
         title: '监控页',
-        path: 'dashboard2',
+        path: 'monitor',
       },
     ],
   },

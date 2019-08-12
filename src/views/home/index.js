@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types'
 import { Button } from 'antd';
 
-class index extends Component {
-  render() {
+class Home extends Component {
+  render () {
     return (
       <div>
         <Button type="primary">home</Button>
       </div>
     );
   }
-
-index.propTypes = {
+}
+Home.propTypes = {
 
 };
 
-export default index;
+export default Home;
